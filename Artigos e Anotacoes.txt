@@ -8,3 +8,12 @@ Teste unitário:
 		- Arranje - cenário para o teste
 		- Act - método que será testado
 		- Assert - verificar se o que foi testado era o esperado
+
+- Anotações
+	- O Problema de usar o LastOrDefault() é que ele iria retornar um valor null,
+	para evitar isso, colocamos um DefaultIfEmpty que devolve o que queremos caso o Default
+	do Last seja disparado. Assim evitamos levantar exeções desnecessárias.
+
+	- Boas Práticas:
+		- Criar a classe de teste com o NomeClasse + Método a ser testado
+		- Quando for criar o método é, Comportamento Esperado + Dado

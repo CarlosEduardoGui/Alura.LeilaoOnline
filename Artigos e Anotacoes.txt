@@ -4,6 +4,9 @@ Teste unitário:
 	- http://wiki.c2.com/?ArrangeActAssert
 	- http://wiki.c2.com/?UnitTest
 	- https://martinfowler.com/bliki/GivenWhenThen.html
+	- https://en.wikipedia.org/wiki/Equivalence_partitioning
+	- https://en.wikipedia.org/wiki/Boundary-value_analysis
+	- https://docs.microsoft.com/pt-br/dotnet/architecture/modern-web-apps-azure/test-asp-net-core-mvc-apps#test-naming
 	- Estrutura:
 		- Arranje - cenário para o teste
 		- Act - método que será testado

@@ -1,0 +1,8 @@
+Teste unitário: 
+	- http://wiki.c2.com/?ArrangeActAssert
+	- http://wiki.c2.com/?UnitTest
+	- https://martinfowler.com/bliki/GivenWhenThen.html
+	- Estrutura:
+		- Arranje - cenário para o teste
+		- Act - método que será testado
+		- Assert - verificar se o que foi testado era o esperado

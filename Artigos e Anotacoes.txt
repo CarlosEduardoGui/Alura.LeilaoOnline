@@ -7,6 +7,9 @@ Teste unitário:
 	- https://en.wikipedia.org/wiki/Equivalence_partitioning
 	- https://en.wikipedia.org/wiki/Boundary-value_analysis
 	- https://docs.microsoft.com/pt-br/dotnet/architecture/modern-web-apps-azure/test-asp-net-core-mvc-apps#test-naming
+	- https://andrewlock.net/creating-parameterised-tests-in-xunit-with-inlinedata-classdata-and-memberdata/
+	- https://softwaretestingfundamentals.com/regression-testing/
+	- https://www.casadocodigo.com.br/products/livro-tdd-dotnet
 	- Estrutura:
 		- Arranje - cenário para o teste
 		- Act - método que será testado
@@ -20,3 +23,12 @@ Teste unitário:
 	- Boas Práticas:
 		- Criar a classe de teste com o NomeClasse + Método a ser testado
 		- Quando for criar o método é, Comportamento Esperado + Dado
+		
+	- Ciclo do TDD: 
+		- basicamente, eu crio um teste que falha para codificar depois
+		- Cria um novo teste sem o negocio existir;
+		- Teste irá falhar;
+		- Corrigir o teste;
+		- O teste passar;
+		- Refatorar o código;
+		- C

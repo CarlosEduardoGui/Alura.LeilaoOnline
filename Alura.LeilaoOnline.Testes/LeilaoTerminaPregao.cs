@@ -1,4 +1,5 @@
 ﻿using Alura.LeilaoOnline.Core;
+using System;
 using Xunit;
 
 namespace Alura.LeilaoOnline.Testes
@@ -15,11 +16,23 @@ namespace Alura.LeilaoOnline.Testes
             //Arranje - cenário
             var leilao = new Leilao("Van Gogh");
             var fulano = new Interessada("Fulano", leilao);
+            var maria = new Interessada("Maria", leilao);
 
-            //Act - método sob teste
-            foreach (var valor in ofertas)
+            leilao.IniciaPregao();
+
+            for (int i = 0; i < ofertas.Length; i++)
             {
-                leilao.RecebeLance(fulano, valor);
+                var valor = ofertas[i];
+                if ((i % 2) == 0)
+                {
+
+                    //Act - método sob teste
+                    leilao.RecebeLance(fulano, valor);
+                }
+                else
+                {
+                    leilao.RecebeLance(maria, valor);
+                }
             }
 
             leilao.TerminaPregao();
@@ -31,9 +44,21 @@ namespace Alura.LeilaoOnline.Testes
         }
 
         [Fact]
+        public void LancaInvalidOperationExceptionDAdoPregaoNaoIniciado()
+        {
+            var leilao = new Leilao("Van Gogh");
+
+            var e = Assert.Throws<InvalidOperationException> (() => leilao.TerminaPregao());
+
+            var MsgEsperada = "Não é possível terminar sem que ele tenha começado.";
+            Assert.Equal(MsgEsperada, e.Message);
+        }
+
+        [Fact]
         public void RetornaZeroDadoLeilaoSemLance()
         {
             var leilao = new Leilao("Van Gogh");
+            leilao.IniciaPregao();
 
             leilao.TerminaPregao();
 
@@ -42,7 +67,5 @@ namespace Alura.LeilaoOnline.Testes
 
             Assert.Equal(valorEsperado, valorObtido);
         }
-
-
     }
 }

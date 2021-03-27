@@ -11,6 +11,8 @@ Teste unitário:
 	- https://softwaretestingfundamentals.com/regression-testing/
 	- https://www.casadocodigo.com.br/products/livro-tdd-dotnet
 	- https://www.martinfowler.com/bliki/TestCoverage.html
+	- https://en.wikipedia.org/wiki/Object-oriented_design
+	- https://www.youtube.com/watch?v=4cVZvoFGJTU&feature=emb_title
 	- Estrutura:
 		- Arranje - cenário para o teste
 		- Act - método que será testado
@@ -33,3 +35,11 @@ Teste unitário:
 		- O teste passar;
 		- Refatorar o código;
 		- Só pode ser feito refatoração se todos os testes já passaram.
+
+	- Classes de equivlência é quando você tem a mesma expectativa (resultado) para condições
+	de entrada diferentes (dados) - Given, When, Then;	
+	
+	I. TDD é uma prática que propõe que os testes sejam escritos antes da implementação da funcionalidade.
+	III. A nomenclatura de um teste pode variar de projeto para projeto, contudo duas coisas devem ser observadas: a) a consistência nos nomes dos testes, b) as três partes de um teste (Arrange, Act, Assert).
+	V. O padrão Arrange-Act-Assert determina que dividamos o teste em 3 seções: uma para definir as condições de entrada (Arrange), outra para indicar qual método está sob teste (Act) e outra para verificar as expectativas de saída (Assert).
+    VI. Exceções devem ser testadas porque fazem parte do comportamento de um sistema.
